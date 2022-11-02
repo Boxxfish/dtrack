@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Urbanist/static/Urbanist-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://components/colored_button/ColoredButton.gd" type="Script" id=2]
+[ext_resource path="res://components/colored_button/gradient_button.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="ColoredButton" type="MarginContainer"]
+margin_right = 100.0
+margin_bottom = 44.0
+script = ExtResource( 2 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 100.0
+margin_bottom = 44.0
+texture = ExtResource( 3 )
+patch_margin_left = 50
+patch_margin_top = 20
+patch_margin_right = 50
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 100.0
+margin_bottom = 44.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 12
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 12
+
+[node name="ButtonText" type="Label" parent="MarginContainer"]
+margin_left = 8.0
+margin_top = 12.0
+margin_right = 92.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "Click Me!"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_right = 100.0
+margin_bottom = 44.0
+custom_styles/focus = SubResource( 2 )
+flat = true

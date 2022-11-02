@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://components/normal_text/NormalText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/spinbox/ButtonFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://components/spinbox/ButtonStyle.tres" type="StyleBox" id=3]
+[ext_resource path="res://Urbanist/static/Urbanist-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://components/outline_button/ButtonStyle.tres" type="StyleBox" id=5]
+[ext_resource path="res://components/spinbox/Spinbox.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 4 )
+
+[node name="Spinbox" type="MarginContainer"]
+margin_right = 113.0
+margin_bottom = 32.0
+script = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 113.0
+margin_bottom = 32.0
+custom_styles/panel = ExtResource( 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 113.0
+margin_bottom = 32.0
+
+[node name="Minus" type="Button" parent="HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "-"
+
+[node name="Number" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 36.0
+margin_top = 6.0
+margin_right = 77.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "3"
+align = 1
+
+[node name="Plus" type="Button" parent="HBoxContainer"]
+margin_left = 81.0
+margin_right = 113.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "+"

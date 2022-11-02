@@ -1,0 +1,81 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AnimaEasing",
+"language": "GDScript",
+"path": "res://addons/anima/core/easings.gd"
+}, {
+"base": "Node",
+"class": "AnimaNode",
+"language": "GDScript",
+"path": "res://addons/anima/core/node.gd"
+}, {
+"base": "Reference",
+"class": "AnimaNodesProperties",
+"language": "GDScript",
+"path": "res://addons/anima/utils/node_properties.gd"
+}, {
+"base": "Reference",
+"class": "AnimaStrings",
+"language": "GDScript",
+"path": "res://addons/anima/utils/strings.gd"
+}, {
+"base": "Tween",
+"class": "AnimaTween",
+"language": "GDScript",
+"path": "res://addons/anima/core/tween.gd"
+}, {
+"base": "Reference",
+"class": "DTrack",
+"language": "GDScript",
+"path": "res://dtrack/DTrack.gd"
+}, {
+"base": "Reference",
+"class": "UiUtils",
+"language": "GDScript",
+"path": "res://dtrack/UiUtils.gd"
+} ]
+_global_script_class_icons={
+"AnimaEasing": "",
+"AnimaNode": "",
+"AnimaNodesProperties": "",
+"AnimaStrings": "",
+"AnimaTween": "",
+"DTrack": "",
+"UiUtils": ""
+}
+
+[application]
+
+config/name="DTrack Sample Project"
+run/main_scene="res://Root.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Anima="*res://addons/anima/core/anima.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/anima/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
