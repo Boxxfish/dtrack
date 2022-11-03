@@ -1,6 +1,6 @@
 # Sample Project
 
-![Sample Project Image](sample_project_img.jpg)
+![Sample Project Image](sample_project/sample_project_img.jpg)
 
 This project demonstrates how components tend to be structured using DTrack. All components are in their own directory inside the `components` folder. A couple components of interest:
 
